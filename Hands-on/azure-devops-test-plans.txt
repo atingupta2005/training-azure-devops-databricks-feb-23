@@ -1,0 +1,4 @@
+# Build Test Cases
+- Open Organization Settings -> Billing and click "Start free trial"
+- Open Organization Settings -> Users. Change access level of users to "Basic + Test Plans"
+- Now open the project and start using test plans
