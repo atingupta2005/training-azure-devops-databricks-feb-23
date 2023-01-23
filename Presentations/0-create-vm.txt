@@ -1,0 +1,2 @@
+az group create --name rgAtinGupta --location eastus
+az vm create --resource-group rgAtinGupta --name vmAtinGuptaCLI --image win2016datacenter  --public-ip-sku Basic --admin-username azureuser
