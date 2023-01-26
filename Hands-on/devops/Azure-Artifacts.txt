@@ -1,15 +1,16 @@
 # Azure Artifacts
 
-az devops configure --defaults project="ATT Trainings Project" organization=https://dev.azure.com/atttrainings0132
+az devops configure --defaults project="atin-project" organization=https://dev.azure.com/atintrainermct2
 
 ## Publish
 
 ### Generate PAT
+nnkrbnpwckx35lfenaj4p3druptcbofbc2jyjk4uwgqi7cr5z3iq
 
 ### Login to Azure
 az account list
 az account show
-az devops login --organization https://dev.azure.com/atttrainings0132
+az devops login --organization https://dev.azure.com/atintrainermct2
 az login
 ltdkaorf5igh7kswbea65st3xf6sjdp34favbgintxwedpjhkruq
 
@@ -18,7 +19,7 @@ mkdir mypackage
 touch mypackage/README.md
 
 ### Publish Package
-az artifacts universal publish --organization https://dev.azure.com/atttrainings0132/ --feed atttrainings0132 --name my-first-package --version 0.0.1 --description "Welcome to Universal Packages" --path ./mypackage
+az artifacts universal publish --organization https://dev.azure.com/atintrainermct2/ --feed atin-project --name my-first-package --version 0.0.1 --description "Welcome to Universal Packages" --path ./mypackage
 
 ## Download
 az artifacts universal download --organization https://dev.azure.com/atttrainings0132/ --feed atttrainings0132 --name my-first-package --version 0.0.1 --path ./mypackages
