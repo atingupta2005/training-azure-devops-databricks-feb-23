@@ -1,0 +1,35 @@
+Create ACR
+Enable Admin access in ACR
+Open Ubuntu VM which has Docker and run below commands:
+docker login acrag6122222.azurecr.io -u acrag6122222
+Password: Zpe98JJq9GMRyGxjFLva+z88IXX2yCS+KGyGRQnjJe+ACRAT2XDn
+
+docker pull nginx
+
+docker tag nginx acrag6122222.azurecr.io/nginx
+
+docker push acrag6122222.azurecr.io/nginx
+
+docker rmi acrag6122222.azurecr.io/nginx
+docker rmi nginx
+docker pull acrag6122222.azurecr.io/nginx
+
+az aks update -n aksag612 -g rgaks --attach-acr /subscriptions/cd5fea2d-25a9-4f82-a18e-5904cdbd52f0/resourcegroups/rgu50/providers/Microsoft.ContainerRegistry/registries/acrag6122222
+
+az aks get-credentials --resource-group rgaks --name aksag612
+
+az aks get-credentials --resource-group rgaks --name aksag612
+
+kubectl get pods
+
+kubectl run nginx --image=acrag6122222.azurecr.io/nginx
+
+kubectl get pods
+
+kubectl expose pod nginx --type=LoadBalancer --port=80
+
+kubectl get svc
+
+kubectl delete svc nginx
+
+kubectl get svc
